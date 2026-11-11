@@ -1,0 +1,24 @@
+services:
+  nodo1:
+    build: ./web
+    container_name: nodo1
+    restart: unless-stopped
+
+  nodo2:
+    build: ./web
+    container_name: nodo2
+    restart: unless-stopped
+
+  balanceador:
+    image: nginx:alpine
+    container_name: balanceador
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      nodo1:
+        condition: service_healthy
+      nodo2:
+        condition: service_healthy
+    restart: unless-stopped
