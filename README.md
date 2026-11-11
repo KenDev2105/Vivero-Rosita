@@ -143,7 +143,7 @@ docker compose up --build -d
 Abre en tu navegador:
 
 ```
-https://localhost
+https://localhost:8080
 ```
 
 >  Al usar un certificado autofirmado, el navegador mostrará una advertencia de seguridad. Es el comportamiento esperado en el entorno local; acepta la excepción para continuar.
