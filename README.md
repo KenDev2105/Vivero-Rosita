@@ -48,22 +48,9 @@ El sitio es una landing page de promoción que presenta los productos de forma a
 
 ##  Arquitectura
 
-```
-                    ┌──────────────────────┐
-   Cliente  ───────►│   Nginx (Balanceador) │
-  (navegador)       │    + Health checks    │
-                    └─────────┬────────────┘
-                              │
-                 ┌────────────┴────────────┐
-                 ▼                         ▼
-        ┌────────────────┐        ┌────────────────┐
-        │  Nodo 1        │        │  Nodo 2        │
-        │  Apache + HTTPS│        │  Apache + HTTPS│
-        │  index.html    │        │  index.html    │
-        │  style.css     │        │  style.css     │
-        └────────────────┘        └────────────────┘
-              (contenedores Docker, orquestados con Docker Compose)
-```
+
+![Diagrama](img/diagrama.jpeg)
+
 
 ### Componentes
 
