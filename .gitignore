@@ -1,0 +1,3 @@
+web/certs/*.key
+web/certs/*.crt
+*.log
