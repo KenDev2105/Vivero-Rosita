@@ -1,29 +1,52 @@
 services:
   nodo1:
     build: ./web
-    container_name: nodo1
-    restart: unless-stopped
+    image: vivero-rosita
+    hostname: nodo1
+    ports:
+      - "127.0.0.1:9005:443"
+    networks:
+      clusternet:
+        ipv4_address: 172.29.0.11
 
   nodo2:
-    build: ./web
-    container_name: nodo2
-    restart: unless-stopped
+    image: vivero-rosita
+    hostname: nodo2
+    ports:
+      - "127.0.0.1:9006:443"
+    networks:
+      clusternet:
+        ipv4_address: 172.29.0.12
 
   nodo3:
-    build: ./web
-    container_name: nodo3
-    restart: unless-stopped
-
-  balanceador:
-    image: nginx:alpine
-    container_name: balanceador
+    image: vivero-rosita
+    hostname: nodo3
     ports:
-      - "8080:80"
+      - "127.0.0.1:9007:443"
+    networks:
+      clusternet:
+        ipv4_address: 172.29.0.13
+
+  lb:
+    image: nginx:alpine
+    ports:
+      - "8088:443"
+      # - "100.109.236.53:443:443"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./web/certs:/etc/nginx/certs:ro
+    networks:
+      - clusternet
     depends_on:
       nodo1:
         condition: service_healthy
       nodo2:
         condition: service_healthy
-    restart: unless-stopped
+      nodo3:
+        condition: service_healthy
+
+networks:
+  clusternet:
+    ipam:
+      config:
+        - subnet: 172.29.0.0/24
