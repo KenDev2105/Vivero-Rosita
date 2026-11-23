@@ -55,12 +55,6 @@
 </head>
 <body class="antialiased text-[#2b302d] bg-[#fbfbf9]">
 
-  <!-- ================= TOP ANNOUNCEMENT BAR ================= -->
-  <aside class="bg-[#0a2e22] text-[#e8f5ee] text-xs py-2 px-4 text-center flex items-center justify-center gap-2 font-medium tracking-wide">
-    <i class="fa-solid fa-truck-fast text-xs opacity-90"></i>
-    <span>Envío botánico gratuito a partir de 45€ · Entregas en 24/48h con packaging sostenible</span>
-  </aside>
-
   <!-- ================= HEADER / NAVEGACIÓN ================= -->
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
@@ -103,39 +97,17 @@
             placeholder="Buscar plantas, macetas, cuidados..." 
             class="w-full pl-9 pr-12 py-2 text-xs rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:border-[#0a2e22] focus:bg-white transition-all text-gray-700 placeholder-gray-400"
           >
-          <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-            <kbd class="text-[10px] text-gray-400 bg-white border border-gray-200 rounded px-1.5 py-0.5 shadow-2xs font-mono">⌘K</kbd>
-          </div>
         </div>
       </div>
 
       <!-- MENÚ DE NAVEGACIÓN -->
       <nav class="hidden lg:flex items-center gap-8 text-[13px] font-medium text-gray-700">
         <a href="#coleccion" class="hover:text-[#0a2e22] transition-colors">Plantas</a>
-        <a href="#coleccion" class="hover:text-[#0a2e22] transition-colors">Macetas y Cerámica</a>
-        <a href="#coleccion" class="hover:text-[#0a2e22] transition-colors">Cuidados y Tierras</a>
+        <a href="#favoritos" class="hover:text-[#0a2e22] transition-colors">Temporada</a>
         <a href="#diagnostico" class="hover:text-[#0a2e22] transition-colors">Asesoría Botánica</a>
+        <a href="#testimonios" class="hover:text-[#0a2e22] transition-colors">Hogares</a>
       </nav>
-
-      <!-- ACCIONES DE USUARIO -->
-      <div class="flex items-center gap-4 text-gray-700">
-        <!-- Favoritos (Corazón) -->
-        <a href="#favoritos" aria-label="Favoritos" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors text-gray-600">
-          <i class="fa-regular fa-heart text-base"></i>
-        </a>
-
-        <!-- Bolsa de compras con notificación -->
-        <a href="#favoritos" aria-label="Carrito de compras" class="relative w-9 h-9 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors text-gray-600">
-          <i class="fa-solid fa-bag-shopping text-base"></i>
-          <span class="absolute top-1 right-0.5 w-4 h-4 rounded-full bg-[#bf4930] text-white text-[10px] font-bold flex items-center justify-center shadow-xs">3</span>
-        </a>
-
-        <!-- Perfil de usuario -->
-        <a href="#footer" aria-label="Cuenta de usuario" class="w-8 h-8 rounded-full bg-[#0a2e22] text-white flex items-center justify-center text-xs hover:opacity-90 transition-opacity">
-          <i class="fa-regular fa-user"></i>
-        </a>
-      </div>
-
+      
     </div>
   </header>
 
@@ -495,7 +467,7 @@
           <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
             <div>
               <span class="text-[10px] text-gray-400 uppercase tracking-wider block">Precio vivero</span>
-              <span class="text-base font-bold text-gray-900">24,90€</span>
+              <span class="text-base font-bold text-gray-900">$24.99</span>
             </div>
             <a href="#newsletter" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-[#0a2e22] text-white text-xs font-semibold hover:bg-[#144132] transition-colors shadow-2xs">
               <i class="fa-solid fa-bag-shopping text-xs"></i>
@@ -541,7 +513,7 @@
           <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
             <div>
               <span class="text-[10px] text-gray-400 uppercase tracking-wider block">Precio vivero</span>
-              <span class="text-base font-bold text-gray-900">18,50€</span>
+              <span class="text-base font-bold text-gray-900">$18.50</span>
             </div>
             <a href="#newsletter" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-[#0a2e22] text-white text-xs font-semibold hover:bg-[#144132] transition-colors shadow-2xs">
               <i class="fa-solid fa-bag-shopping text-xs"></i>
@@ -582,7 +554,7 @@
           <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
             <div>
               <span class="text-[10px] text-gray-400 uppercase tracking-wider block">Precio vivero</span>
-              <span class="text-base font-bold text-gray-900">16,00€</span>
+              <span class="text-base font-bold text-gray-900">$16.00</span>
             </div>
             <a href="#newsletter" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-[#0a2e22] text-white text-xs font-semibold hover:bg-[#144132] transition-colors shadow-2xs">
               <i class="fa-solid fa-bag-shopping text-xs"></i>
@@ -627,7 +599,7 @@
           <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
             <div>
               <span class="text-[10px] text-gray-400 uppercase tracking-wider block">Precio artesanal</span>
-              <span class="text-base font-bold text-gray-900">12,90€</span>
+              <span class="text-base font-bold text-gray-900">$12.99</span>
             </div>
             <a href="#newsletter" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-[#0a2e22] text-white text-xs font-semibold hover:bg-[#144132] transition-colors shadow-2xs">
               <i class="fa-solid fa-bag-shopping text-xs"></i>
@@ -1038,7 +1010,7 @@
           <div class="space-y-2 pt-2 text-xs text-gray-700">
             <div class="flex items-center gap-2.5">
               <i class="fa-solid fa-location-dot text-[#9a4c38]"></i>
-              <span>Camino de los Viveros 14, 28023 Madrid</span>
+              <span>1ra Avenida, Ciudad Barrios</span>
             </div>
             <div class="flex items-center gap-2.5">
               <i class="fa-regular fa-clock text-[#9a4c38]"></i>
@@ -1073,30 +1045,6 @@
             <li><a href="#newsletter" class="hover:text-[#0a2e22] transition-colors">Envíos Especiales para Regalo</a></li>
             <li><a href="#diagnostico" class="hover:text-[#0a2e22] transition-colors">Contacto y Talleres</a></li>
           </ul>
-        </div>
-
-        <!-- Columna 4: Boletín Verde -->
-        <div class="lg:col-span-3 space-y-3">
-          <h4 class="text-xs font-bold tracking-wider uppercase text-[#0a2e22]">
-            BOLETÍN VERDE
-          </h4>
-          <p class="text-xs text-gray-500 leading-relaxed">
-            Recibe nuestra guía de riego estacional y consejos mensuales de floración.
-          </p>
-          <form onsubmit="event.preventDefault();" class="space-y-2 pt-1">
-            <input 
-              type="email" 
-              placeholder="tu@correo.com" 
-              class="w-full px-3.5 py-2 text-xs rounded-lg border border-gray-200 focus:outline-none focus:border-[#0a2e22]"
-              required
-            >
-            <button 
-              type="submit" 
-              class="w-full py-2.5 rounded-lg bg-[#0a2e22] text-white text-xs font-semibold hover:bg-[#144132] transition-colors shadow-2xs"
-            >
-              Suscribirme
-            </button>
-          </form>
         </div>
 
       </div>
